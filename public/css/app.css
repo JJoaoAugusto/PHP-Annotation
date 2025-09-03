@@ -17,7 +17,8 @@
 }
 
 header,
-section.home_pg {
+section.home_pg,
+section.form_pg {
     padding: 0px 15px;
 }
 
@@ -32,7 +33,7 @@ header {
     align-items: center;
 }
 
-header > .header_left > img {
+header .header_left img {
     width: 100px;
     cursor: pointer;
 }
@@ -47,7 +48,7 @@ header > .header_right {
 
 button {
     cursor: pointer;
-    padding: 5px 10px;
+    padding: 10px 10px;
     border: 1px solid var(--color-green);
     background-color: transparent;
     font-size: 18px;
@@ -67,11 +68,12 @@ button.btn_login {
     color: var(--color-black-dark);
 }
 
-section.home_pg {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+button.btn_fullwidth {
+    width: 100%;
+}
+
+section.home_pg,
+section.form_pg {
     width: 100vw;
     height: calc(100vh - 80px);
     background: linear-gradient(
@@ -79,6 +81,13 @@ section.home_pg {
         var(--color-black-dark),
         var(--color-gray-dark)
     );
+}
+
+section.home_pg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 h1.title {
@@ -102,8 +111,72 @@ p.subtitle {
     margin-bottom: 50px;
 }
 
+section.form_pg {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+    padding-top: 75px !important;
+}
+
+section.form_pg .form_left {
+    width: 60%;
+}
+
+section.form_pg .form_right {
+    width: 40%;
+    background-color: var(--color-black-mid);
+    border: 1px solid var(--color-gray-mid);
+    border-radius: 5px;
+    padding: 20px;
+}
+
+section.form_pg h1.title,
+section.form_pg p.subtitle {
+    text-align: start;
+}
+
+section.form_pg div.form_right form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+div.form_right form input {
+    background-color: var(--color-gray-dark);
+    border: 1px solid var(--color-gray-mid);
+    border-radius: 5px;
+    color: var(--color-gray-light);
+    font-size: 16px;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+}
+
+div.form_right form input:focus {
+    outline: none;
+    background-color: var(--color-gray-mid);
+}
+
+div.form_right form span {
+    color: var(--color-gray-light);
+    font-size: 16px;
+    text-align: right;
+    margin-bottom: 30px;
+}
+
+div.form_right form span a {
+    color: var(--color-green);
+    text-decoration: none;
+}
+
+div.form_right form span a:hover {
+    text-decoration: underline;
+}
+
 @media (min-width: 900px) {
-    header {
+    header,
+    section.home_pg,
+    section.form_pg {
         padding: 0px 60px;
     }
 
@@ -117,7 +190,9 @@ p.subtitle {
 }
 
 @media (min-width: 1200px) {
-    header {
+    header,
+    section.home_pg,
+    section.form_pg {
         padding: 0px 120px;
     }
 

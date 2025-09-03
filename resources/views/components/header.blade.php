@@ -1,9 +1,11 @@
 <header>
     <div class="header_left">
-        <img src="{{ asset('imgs/logo.png') }}" alt="Logo" title="Logo">
+        <a href={{ route('home') }}>
+            <img src="{{ asset('imgs/logo.png') }}" alt="Logo" title="Logo">
+        </a>
     </div>
     <div class="header_right">
-        @include('components.button', ['text' => 'Criar Conta', 'class' => ''])
-        @include('components.button', ['text' => 'Login', 'class' => 'btn_login'])
+        <x-button class='' linkto='create-account'>Criar Conta</x-button>
+        <x-button class='btn_login' linkto='create-account'>Login</x-button>
     </div>
 </header>
