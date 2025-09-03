@@ -3,7 +3,7 @@
 @section('content')
     <section class="form_pg">
         <div class="form_left">
-            <h1 class="title">Crie seua conta</h1>
+            <h1 class="title">Crie sua conta</h1>
             <p class="subtitle">Criando sua conta você poderá utilizar todos os recursos da plataforma de forma totalmente gratuita.</p>
         </div>
         <div class="form_right">
