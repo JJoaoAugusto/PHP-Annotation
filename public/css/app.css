@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: "Roboto", "Arial";
 }
 
 :root {
@@ -15,10 +16,14 @@
     --shadow-color: rgba(51, 51, 51, 0.16);
 }
 
+header,
+section.home_pg {
+    padding: 0px 15px;
+}
+
 header {
     width: 100vw;
     height: 80px;
-    padding: 0px 15px;
     border-bottom: 1px solid var(--color-gray-mid);
     background-color: var(--color-black-dark);
     display: flex;
@@ -27,9 +32,17 @@ header {
     align-items: center;
 }
 
-header .header_left img {
-    width: 112px;
+header > .header_left > img {
+    width: 100px;
     cursor: pointer;
+}
+
+header > .header_right {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
 }
 
 button {
@@ -54,14 +67,65 @@ button.btn_login {
     color: var(--color-black-dark);
 }
 
+section.home_pg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: calc(100vh - 80px);
+    background: linear-gradient(
+        to bottom,
+        var(--color-black-dark),
+        var(--color-gray-dark)
+    );
+}
+
+h1.title {
+    color: var(--color-white);
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+h1.title > span {
+    color: var(--color-green);
+}
+
+h1.title,
+p.subtitle {
+    text-align: center;
+}
+
+p.subtitle {
+    color: var(--color-gray-light);
+    font-size: 18px;
+    margin-bottom: 50px;
+}
+
 @media (min-width: 900px) {
     header {
         padding: 0px 60px;
+    }
+
+    h1.title {
+        font-size: 40px;
+    }
+
+    p.subtitle {
+        font-size: 20px;
     }
 }
 
 @media (min-width: 1200px) {
     header {
         padding: 0px 120px;
+    }
+
+    h1.title {
+        font-size: 44px;
+    }
+
+    p.subtitle {
+        font-size: 22px;
     }
 }
