@@ -6,6 +6,6 @@
     </div>
     <div class="header_right">
         <x-button class='' linkto='create-account'>Criar Conta</x-button>
-        <x-button class='btn_login' linkto='create-account'>Login</x-button>
+        <x-button class='btn_login' linkto='login'>Login</x-button>
     </div>
 </header>
